@@ -1,4 +1,4 @@
-#TTP_Assignment-5
+# TTP_Assignment-5
 
 ## Goal:
 This is another exercise to further demonstrate an understanding of HTML, CSS, JS, DOM manipulation, and handling user events
