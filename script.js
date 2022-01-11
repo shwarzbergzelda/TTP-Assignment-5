@@ -7,19 +7,20 @@ let size = "";
 let numOfRows = 0;
 let numOfColumns = 0;
 
-function addRow(){
-    if(numOfColumns == 0){
-        numOfColumns = 1;
-        size = "";
-        for(let i = 0; i < numOfColumns; i++){
-            size+=" 50px";
-        }
-        grid.style.gridTemplateColumns = size;
-    }
-    grid.innerHTML+=rowItem;
+function addCol(){
+    
+    size+=" 50px";
+    grid.style.gridTemplateColumns = size;
 
-    for(let i = 0; i < numOfColumns-1; i++){
-        grid.innerHTML+=colItem;
+    if(numOfRows == 0){
+        numOfRows = 1;
+        grid.innerHTML+=rowItem;
+    } else {
+        let total = document.getElementsByClassName("grid-item-row").length;
+        for(let i = 0; i < total; i++){
+            grid.innerHTML+=colItem;
+        }
     }
-    numOfRows++;
+
+    numOfColumns++;
 }
