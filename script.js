@@ -7,20 +7,21 @@ let size = "";
 let numOfRows = 0;
 let numOfColumns = 0;
 
-function addCol(){
+function removeCol(){
+    let items = grid.children;
+    const len = items.length;
     
-    size+=" 50px";
-    grid.style.gridTemplateColumns = size;
-
-    if(numOfRows == 0){
-        numOfRows = 1;
-        grid.innerHTML+=rowItem;
-    } else {
-        let total = document.getElementsByClassName("grid-item-row").length;
-        for(let i = 0; i < total; i++){
-            grid.innerHTML+=colItem;
-        }
+    for(let i = len-1; i >= numOfColumns-1; i-=numOfColumns){
+        grid.removeChild(items[i]);
     }
 
-    numOfColumns++;
+    size = size.substring(0,size.lastIndexOf(" "));
+    grid.style.gridTemplateColumns = size;
+
+    numOfColumns--;
+
+    if(numOfColumns == 0){
+        numOfRows = 0;
+        resetGrid();
+    }
 }
