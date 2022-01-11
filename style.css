@@ -1,26 +1,47 @@
 body {
-    margin: 0;
+    background-color: #0d233a;
 }
 
+/* styles and format for the grid container */
 .grid {
     display: grid;
-    column-gap: 15px;
+    column-gap: 10px;
 }
-
+/* styles for the grid rows */
 .grid-item-row{
     border: 2px solid black;
-    width:50px;
-    height:50px;
-    margin:5px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    margin: 1px;
     text-align: center;
     background-color: white;
-}
 
+}
+/* styles for the grid columns */
 .grid-item-col{
     border: 2px solid black;
-    width:50px;
-    height:50px;
-    margin:5px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    margin: 1px;
     text-align: center;
     background-color: white;
+    grid-template-columns: 1px;
+}
+/* styles for the nav bar */
+.inputs {
+    margin: 20px auto 60px auto;
+    text-align: center;
+}
+/* styles for the nav bar buttons */
+.button {
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    background-color: #f5ad49;
+    border-radius: 5px;
+    border: none;
+    font-style: bold;
+    text-align: center;
 }

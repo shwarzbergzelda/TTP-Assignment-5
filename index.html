@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <title>title</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js"></script>
   </head>
   <body>
+    <!-- BUTTON CONTAINER DIV -->
     <div class="inputs">
-      <button id="inputRows" onclick="addRow()">Add Row</button>
-      <button id="inputCols" onclick="addCol()">Add Column</button>
-      <button id="removeRows" onclick="removeRow()">Remove Row</button>
-      <button id="removeCols" onclick="removeCol()">Remove Column</button>
-      <button id="fillEmpty">Fill Empty</button>
-      <button id="fillAll">Fill All</button>
-      <button id="clearAll">Clear All</button>
+      <button id="inputRows" class="button">Add Row</button>
+      <button id="inputCols" class="button">Add Column</button>
+      <button id="removeRows" class="button">Remove Row</button>
+      <button id="removeCols" class="button">Remove Column</button>
+      <button id="fillEmpty" class="button">Fill Empty</button>
+      <button id="fillAll" class="button">Fill All</button>
+      <button id="clearAll" class="button">Clear All</button>
 
-      <select name="colors" id="colors">
-        <option value="white">Default Color</option>
+      <!-- COLOR OPTIONS -->
+      <select name="colors" id="colors" class="button">
+        <option value="white"> ---Select Color--- </option>
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="green">Green</option>
@@ -24,11 +27,21 @@
         <option value="maroon">Maroon</option>
         <option value="pink">Pink</option>
         <option value="crimson">Crimson</option>
+        <option value="coral">Coral</option>
+        <option value="indigo">Indigo</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="teal">Teal</option>
+        <option value="slateGray">Gray</option>
+        <option value="plum">Plum</option>
+        <option value="midnightBlue">Midnight Blue</option>
+        <option value="hotPink">Hot Pink</option>
+        <option value="forestGreen">Forest Green</option>
+        <option value="deepPink">Deep Pink</option>
       </select>
     </div>
 
+    <!-- GRID CONTAINER DIV -->
     <div class="grid"></div>
 
-    <script src="script.js"></script>
   </body>
 </html>
