@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .grid {
     display: grid;
     column-gap: 15px;
@@ -9,6 +13,7 @@
     height:50px;
     margin:5px;
     text-align: center;
+    background-color: white;
 }
 
 .grid-item-col{
@@ -17,4 +22,5 @@
     height:50px;
     margin:5px;
     text-align: center;
+    background-color: white;
 }

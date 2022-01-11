@@ -115,3 +115,15 @@ grid.addEventListener("click", (e) => {
     e.target.style.backgroundColor = getColor();
   }
 });
+
+const fillEmptyButton = document.getElementById("fillEmpty");
+
+fillEmptyButton.addEventListener("click", () => {
+  const gridItems = grid.children;
+
+  for (let item of gridItems) {
+    if (window.getComputedStyle(item).getPropertyValue("background-color") == "rgb(255, 255, 255)") {
+       item.style.backgroundColor = getColor();
+    }
+  }
+});
