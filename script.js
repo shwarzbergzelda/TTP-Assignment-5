@@ -1,4 +1,3 @@
-
 const rowItem = "<div class='grid-item-row'></div>";
 const colItem = "<div class='grid-item-col'></div>";
 
@@ -7,20 +6,21 @@ let size = "";
 let numOfRows = 0;
 let numOfColumns = 0;
 
-function addCol(){
+function removeRow(){
+    let items = grid.children;
     
-    size+=" 50px";
-    grid.style.gridTemplateColumns = size;
-
-    if(numOfRows == 0){
-        numOfRows = 1;
-        grid.innerHTML+=rowItem;
-    } else {
-        let total = document.getElementsByClassName("grid-item-row").length;
-        for(let i = 0; i < total; i++){
-            grid.innerHTML+=colItem;
-        }
+    for(let i = 0; i < numOfColumns; i++){
+        grid.removeChild(items[0]);
     }
 
-    numOfColumns++;
+    numOfRows--;
+    
+    if(numOfRows == 0){
+        numOfColumns = 0;
+        resetGrid();
+    }
+}
+
+function resetGrid(){
+    grid.innerHTML="";
 }
