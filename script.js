@@ -130,3 +130,12 @@ fillAllButton.addEventListener("click", () => {
         item.style.backgroundColor = getColor();
     }
 });
+
+const clearAllButton = document.getElementById("clearAll");
+clearAllButton.addEventListener("click", () => {
+    const gridItems = grid.children;
+
+    for (let item of gridItems) {
+        item.style.backgroundColor = "white";
+    }
+});
