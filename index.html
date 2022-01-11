@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>title</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
     <div class="inputs">
-      <button id = "inputRows" onclick="addRow()">Add Row</button>
-      <button id = "inputCols" onclick="addCol()">Add Column</button>
-      <button id = "removeRows" onclick="removeRow()">Remove Row</button>
-      <button id = "removeCols" onclick="removeCol()">Remove Column</button>
+      <button id="inputRows" onclick="addRow()">Add Row</button>
+      <button id="inputCols" onclick="addCol()">Add Column</button>
+      <button id="removeRows" onclick="removeRow()">Remove Row</button>
+      <button id="removeCols" onclick="removeCol()">Remove Column</button>
+      <button id="fillEmpty">Fill Empty</button>
+      <button id="fillAll">Fill All</button>
 
       <select name="colors" id="colors">
-        <option selected="selected">Default Color</option>
+        <option value="white">Default Color</option>
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="green">Green</option>
@@ -26,7 +27,7 @@
     </div>
 
     <div class="grid"></div>
-    
+
     <script src="script.js"></script>
   </body>
 </html>
